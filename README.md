@@ -9,7 +9,7 @@ With the help ofcomputer science professors, the key types of deep learning tech
 ## Overview of CNNs, LSTMs, ConvLSTMs, and Autoencoders 
 ### Convolutional Neural Networks 
 A CNN has an input layer, hidden layer(s), and an output layer. 
-![image](https://files.cdn.thinkific.com/file_uploads/118220/images/9ac/ef7/edb/1583485122964.jpg?width=1920&dpr=2)
+## ![image](https://files.cdn.thinkific.com/file_uploads/118220/images/9ac/ef7/edb/1583485122964.jpg?width=1920&dpr=2)
 In this diagram x1...xn represent the inputs, while x0 is the bias factor, the w1...wn are the weights that the inputs are multiplied by. A is the sum of these products, often called the output. 
 
 
