@@ -15,6 +15,7 @@ x1...xn represent the inputs, either from the input layer of a value from a prev
 x0 is the bias unit, which acts similat to an intercept term and is a constant that is added to the input of the activation function 
 w1...wn are the weights that the inputs are multiplied by
 A is the output, which is calculated by inputing the sum of the inputs times their weights into an activation function, f. The activation function allows neural networks to be flexible, and model linear, hyperbolic, logarithmic, or gaussian relationships. 
+## ![image](https://sds-platform-private.s3-us-east-2.amazonaws.com/uploads/70_blog_image_3.png) 
 A convultional neural network uses filters to obtain the features of an input. Each filter is a matrix with weights which then traverses the image and produces an output. Additionally, CNNs uses pooling to reduce the amount of parameters, essentially pools shrink the matrix, by taking, for example the max value for a given quadrant. This is called MAX pooling. CNNs are used for tasks that require computer vision because they retain the spatial relationship of data. 
 
 
