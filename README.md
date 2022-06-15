@@ -9,7 +9,7 @@ With the help of computer science professors, the key types of deep learning tec
 ## Overview of CNNs, LSTMs, ConvLSTMs, and Autoencoders 
 ### Convolutional Neural Networks 
 A CNN has an input layer, hidden layer(s), and an output layer. 
-## ![image](https://files.cdn.thinkific.com/file_uploads/118220/images/9ac/ef7/edb/1583485122964.jpg?width=1920&dpr=2,width=200, height=400)
+## ![image](https://files.cdn.thinkific.com/file_uploads/118220/images/9ac/ef7/edb/1583485122964.jpg?width=1920&dpr=2)
 In this diagram:
 x1...xn represent the inputs, either from the input layer of a value from a previous hidden layer 
 x0 is the bias unit, which acts similat to an intercept term and is a constant that is added to the input of the activation function 
