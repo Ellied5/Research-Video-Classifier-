@@ -12,7 +12,7 @@ A CNN has an input layer, hidden layer(s), and an output layer.
 ## ![image](https://files.cdn.thinkific.com/file_uploads/118220/images/9ac/ef7/edb/1583485122964.jpg?width=1920&dpr=2)
 In this diagram:
 x1...xn represent the inputs, either from the input layer of a value from a previous hidden layer 
-x0 is the bias unit, which acts similat to an intercept term and is a constant that is added to the input of the activation function 
+x0 is the bias unit, which acts similar to an intercept term and is a constant that is added to the input of the activation function 
 w1...wn are the weights that the inputs are multiplied by
 A is the output, which is calculated by inputing the sum of the inputs times their weights into an activation function, f. The activation function allows neural networks to be flexible, and model linear, hyperbolic, logarithmic, or gaussian relationships. 
 ## ![image](https://austingwalters.com/wp-content/uploads/2019/01/image-filter-matrix-cnn.png)
