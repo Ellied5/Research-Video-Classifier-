@@ -19,7 +19,7 @@ ass = []
 for i in range(1,170):
 	if i != 2:
 		continue
-	fv = "Individual_clips/Post-Injury/T("+str(i)+").mp4"
+	fv = 'Individual_clips/Post-Injury/T('+str(i)+').mp4'
 	dt,_,_ = torchvision.io.read_video(fv)
 	#dt = dt.permute(0, 3, 1, 2)
 	#print(dt.shape)
@@ -31,7 +31,7 @@ for i in range(1,170):
 for i in range(1,662):
 	if i != 2:
 		continue
-	fv = "Individual_clips/Pre-Injury/R("+str(i)+").mp4"
+	fv = 'Individual_clips/Pre-Injury/R('+str(i)+').mp4'
 	dt,_,_ = torchvision.io.read_video(fv)
 	#dt = dt.permute(0, 3, 1, 2)
 	#print(dt.shape)
