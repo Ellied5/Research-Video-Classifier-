@@ -16,7 +16,6 @@ data_transforms = transforms.Compose([
     transforms.Resize((256, 256)),transforms.ToTensor(),
 		transforms.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),])
 trans=transforms.ToPILImage()
-trans2=transforms.PILToTensor()
 ass = []
 
 torch.Size([40, 540, 960, 3])
@@ -31,6 +30,9 @@ for i in range(1,171):
 		imgj = dt[l[j],:,:,:]
 		imgj=trans(imgj)
 		imgj=data_transforms(imgj)
+		imgj=trans(imgj)
+		imgj=transforms.Grayscale()(imgj)
+		imgj=transforms.ToTensor()(imgj)  
 		newpath = 'data/Post-Injury/'+str(i)+'/' 
 		if not os.path.exists(newpath):
 			os.makedirs(newpath)
@@ -46,6 +48,9 @@ for i in range(1,663):
 		imgj = dt[l[j],:,:,:]
 		imgj=trans(imgj)
 		imgj=data_transforms(imgj)
+		imgj=trans(imgj)
+		imgj=transforms.Grayscale()(imgj)
+		imgj=transforms.ToTensor()(imgj)  
 		newpath = 'data/Pre-Injury/'+str(i)+'/'
 		if not os.path.exists(newpath):
 			os.makedirs(newpath)
