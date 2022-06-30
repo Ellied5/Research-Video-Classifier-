@@ -19,13 +19,13 @@ trans=transforms.ToPILImage()
 ass = []
 
 torch.Size([40, 540, 960, 3])
-
+print("Processing Post-Injury Videos..")
 for i in range(1,171):
 	file="T ("+str(i)+").mp4"
 	fv ="Individual_clips/Post-Injury/"+file 
 	dt,_,_ = torchvision.io.read_video(fv)
 	dt = dt.permute(0, 3, 1, 2)
-	l = random.sample(range(dt.shape[0]), 20)
+	l = random.sample(range(dt.shape[0]), 150)
 	for j in range(len(l)):
 		imgj = dt[l[j],:,:,:]
 		imgj=trans(imgj)
@@ -36,14 +36,16 @@ for i in range(1,171):
 		newpath = 'data/Post-Injury/'+str(i)+'/' 
 		if not os.path.exists(newpath):
 			os.makedirs(newpath)
-		save_image(imgj, newpath+str(j)+'.png')
-        
-for i in range(1,663):
+		save_image(imgj, newpath+str(j)+'.tiff')
+print("Completed.")
+
+print("Processing Pre-Injury Videos..")   
+for i in range(1,663):  
 	file="R("+str(i)+").mp4"
 	fv ="Individual_clips/Pre-Injury/"+file 
 	dt,_,_ = torchvision.io.read_video(fv)
 	dt = dt.permute(0, 3, 1, 2)
-	l = random.sample(range(dt.shape[0]), 20)
+	l = random.sample(range(dt.shape[0]), 45)
 	for j in range(len(l)):
 		imgj = dt[l[j],:,:,:]
 		imgj=trans(imgj)
@@ -54,4 +56,5 @@ for i in range(1,663):
 		newpath = 'data/Pre-Injury/'+str(i)+'/'
 		if not os.path.exists(newpath):
 			os.makedirs(newpath)
-		save_image(imgj, newpath+str(j)+'.png')
+		save_image(imgj, newpath+str(j)+'.tiff')
+print("Completed.")
