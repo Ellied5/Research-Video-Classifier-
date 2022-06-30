@@ -21,7 +21,12 @@ In the creation of the final video processer, I practiced by writing a much simp
 ## Video Processing 
 To begin processing the videos, I wrote a program video_process.py that converted the videos into tensors and created an array of these tensors which could bee fed to the model. Unfortunately, the memory on my computer was unable to run the over 800 video tensors at once. In order to create a more memory efficient solution, I decided to save each of the RGB tensors as a csv file which is what the script video_process_csv.py achieves. In order to create a model, I will have to load the data from the csv files in batches of ~200 because this what my computer can run at once. Although this solution was not my intial idea it will allow for me to accommodate the resources that I have. 
 ## Training the Supervised Classification Model 
-The next step in creating the video classifier was the load the csv files into a training data set and to label them as either pre or post injury using a 0 or 1 respectively. 
+The next step in creating the video classifier was the load the csv files into a training data set and to label them as either pre or post injury using a 0 or 1 respectively. \
+# Controlling for lighting and non-biological similarities 
+Take the upper left corner of the video and test model accuracy (100-100)
+Take the center 20-40 frames from a video (random within the center window random.sample(q1,q3,numframes) 
+Test a smaller number of frames per video (randomized) 
+Test all the video frames 
 ## LSTM, ConvLSTM, and Autoencoders: Building an unsupervised model 
 
 
